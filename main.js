@@ -43,12 +43,12 @@ function checandoResultado(retorno) {
 function marcarUm(element) {
     if (vez.textContent === "X") {
         resultado[parseInt(element.value)] = 'x';
-        vez.textContent = "O";
+        vez.innerHTML = `<span id="vezDo" style='color:blue;'>O</span>`;
         element.innerHTML = '<button class="box" style="color:red;">X</button>';
     }
     else{
         resultado[parseInt(element.value)] = 'o';
-        vez.textContent = "X";
+        vez.innerHTML = `<span id="vezDo" style='color:red;'>X</span>`;
         element.innerHTML = '<button class="box" style="color:blue;">O</button>'
     }
     return resultado;
